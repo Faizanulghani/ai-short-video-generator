@@ -40,8 +40,8 @@ const SideNav = () => {
           <Link href={item.path} key={item.id}>
             <div
               className={`flex items-center gap-3 p-3 ${
-                pathName === item.path ? "bg-[#D21E13] text-white" : ""
-              } hover:bg-[#D21E13] hover:text-white rounded-md cursor-pointer`}
+                pathName === item.path ? "bg-primary text-white" : ""
+              } hover:bg-primary hover:text-white rounded-md cursor-pointer`}
             >
               <item.icon />
               <h2>{item.name}</h2>
