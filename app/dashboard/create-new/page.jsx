@@ -3,11 +3,15 @@
 import { useState } from "react";
 import SelectTopics from "./_components/SelectTopics";
 import SelectStyle from "./_components/SelectStyle";
+import SelectDuration from "./_components/SelectDuration";
+import { Button } from "@/components/ui/button";
 
 const CreateNew = () => {
   let [formData, setFormData] = useState([]);
   const onHandleInputChange = (fieldName, fieldValue) => {
     console.log(fieldName, fieldValue);
+
+    setFormData((prev) => ({ ...prev, [fieldName]: fieldValue }));
   };
   return (
     <div className="md-px-20">
@@ -18,6 +22,9 @@ const CreateNew = () => {
       <div className="mt-10 shadow-md p-10">
         <SelectTopics onUserSelect={onHandleInputChange} />
         <SelectStyle onUserSelect={onHandleInputChange} />
+        <SelectDuration onUserSelect={onHandleInputChange} />
+
+        <Button className="mt-10 w-full">Create Short Video</Button>
       </div>
     </div>
   );
