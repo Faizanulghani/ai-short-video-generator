@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import SelectTopics from "./_components/SelectTopics";
+import SelectStyle from "./_components/SelectStyle";
 
 const CreateNew = () => {
   let [formData, setFormData] = useState([]);
@@ -16,6 +17,7 @@ const CreateNew = () => {
 
       <div className="mt-10 shadow-md p-10">
         <SelectTopics onUserSelect={onHandleInputChange} />
+        <SelectStyle onUserSelect={onHandleInputChange} />
       </div>
     </div>
   );
